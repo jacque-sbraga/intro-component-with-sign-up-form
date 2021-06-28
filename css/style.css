@@ -1,0 +1,191 @@
+:root{
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font: 16px "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container{
+  align-items: center;
+  background: var(--red) url("../images/bg-intro-desktop.png") top;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  padding: 0 1rem;
+  width: 100vw;
+}
+
+.signup-page{
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+}
+
+.signup-page__content{
+  flex-basis: 45%;
+}
+
+.signup-page__content h2{
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 3.4rem;
+}
+
+.signup-page__content p{
+  color: #fff;
+}
+
+.signup-page__form-item{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+
+.signup-page__banner{
+  background: var(--blue);
+  box-shadow: 0 7px hsla(249, 10%, 26%, 0.24);
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+.form{
+  background: #fff;
+  box-shadow: 0 7px hsla(249, 10%, 26%, 0.24);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.form__group{
+  position: relative;
+  margin-bottom: 1.4rem;
+  transition: all 0.5s;
+}
+
+.form__input{
+  border: 2px solid #dedede;
+  border-radius: 5px;
+  color: var(--dark-blue);
+  font: 500 16px "Poppins";
+  outline: none;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.form__input:focus{
+  border: 2px solid var(--dark-blue);
+  border-radius: 5px;
+}
+
+.error-icon{
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  visibility: hidden;
+}
+
+.error-message{
+  color:var(--red);
+  font-size: 10px;
+  font-style: italic;
+  position: absolute;
+  right: 0;
+  top: 3.6rem;
+  visibility: hidden;
+}
+
+.form__group.error{
+  margin-bottom: 2.5rem;
+}
+
+.form__group.error .error-icon,
+.form__group.error .error-message{
+  visibility: visible;
+}
+
+.form__input.error{
+  border: 2px solid var(--red);
+}
+
+.form__input.error[type="email"]::placeholder{
+  color: var(--red)
+}
+
+.form__submit{
+  background: var(--green);
+  box-shadow: 0 4px hsl(154, 35%, 50%);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font: 600 16px "Poppins", sans-serif;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.8rem;
+}
+
+.form__terms{
+  color: var(--grayish-blue);
+  font-size: 11px;
+  text-align: center;
+}
+.terms__link{
+  color: var(--red);
+  font-weight: 700;
+}
+
+@media (max-width: 970px){
+  .container {
+    height: auto;
+    padding: 0 1.7rem;
+    background: var(--red) url("../images/bg-intro-mobile.png") top;
+  }
+  .signup-page{
+    flex-direction: column;
+    text-align: center;
+    margin: 6rem 0 6rem 0;
+  }
+  .signup-page__content{
+    margin-bottom: 4rem;
+  }
+  .signup-page__content h2{
+    font-size: 24px;
+    line-height: normal;
+  }
+  .signup-page__banner{
+    padding: 1.2rem 3rem;
+  }
+  .form__input{
+    font-size: 0.9rem;
+    padding: 0.9rem 1.3rem;
+  }
+
+  .form__terms{
+    padding: 0 1rem;
+  }
+}

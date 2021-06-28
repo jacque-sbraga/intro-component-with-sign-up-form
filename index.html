@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+
+<body>
+  <main class="container">
+    <section class="signup-page">
+      <div class="signup-page__content">
+        <h2>Learn to code by watching others</h2>
+        <p>
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+          but understanding how developers think is invaluable.
+        </p>
+      </div>
+      <div class="signup-page__form-item">
+        <a href="#" class="signup-page__banner"> <strong>Try it free 7 days</strong> then $20/mo. thereafter</a>
+        <form action="" class="form" data-form>
+          <div class="form__group">
+            <input type="text" name="first-name" placeholder="First Name" class="form__input" data-field="firstName">
+            <img src="./images/icon-error.svg" alt="" class="error-icon">
+            <p class="error-message" data-error>Error message</p>
+          </div>
+          <div class="form__group">
+            <input type="text" name="last-name" placeholder="Last Name" class="form__input" data-field="lastName">
+            <img src="./images/icon-error.svg" alt="" class="error-icon">
+            <p class="error-message">Error message</p>
+          </div>
+          <div class="form__group">
+            <input type="email" name="email" placeholder="Email Address" class="form__input" data-field="email">
+            <img src="./images/icon-error.svg" alt="" class="error-icon">
+            <p class="error-message">Error message</p>
+          </div>
+          <div class="form__group">
+            <input type="password" name="password" placeholder="Password" class="form__input" data-field="password">
+            <img src="./images/icon-error.svg" alt="" class="error-icon">
+            <p class="error-message">Error message</p>
+          </div>
+          <button type="submit" class="form__submit">Claim your free trial</button>
+          <p class="form__terms">By clicking the button, you are agreeing to our <a href="#" class="terms__link">Terms
+              and Services</a></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="js/validateForm.js"></script>
+</body>
+
+</html>

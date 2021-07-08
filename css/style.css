@@ -135,6 +135,10 @@ a {
   color: var(--red)
 }
 
+.form_input.success{
+  border: 2px solid var(--green);
+}
+
 .form__submit{
   background: var(--green);
   box-shadow: 0 4px hsl(154, 35%, 50%);

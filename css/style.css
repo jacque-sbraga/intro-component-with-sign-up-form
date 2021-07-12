@@ -135,7 +135,7 @@ a {
   color: var(--red)
 }
 
-.form_input.success{
+.form__input.success{
   border: 2px solid var(--green);
 }
 
